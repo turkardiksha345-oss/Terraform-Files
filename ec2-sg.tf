@@ -12,7 +12,7 @@ resource "aws_instance" "my_instance" {
 #!/bin/bash
 sudo apt update -y
 sudo apt install nginx -y
-echo "<h1> hello pranit </h1>" > /var/www/html/index.html
+echo "<h1> hello this is nginx page </h1>" > /var/www/html/index.html
 sudo systemctl start nginx
 sudo systemctl enable nginx
 EOF
@@ -27,7 +27,7 @@ EOF
 
 resource "aws_security_group" "aws_sg" {     # to create security group
   name        = "sg_name"
-  description = "Allow TLS inbound traffic and all outbound traffic"
+  description = "Allow inbound traffic and all outbound traffic"
   vpc_id      = "vpc-0fed28ece99ad2aa5"
 
     ingress {                               # inbound rule
