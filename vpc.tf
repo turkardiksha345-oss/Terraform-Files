@@ -42,7 +42,7 @@ resource "aws_subnet" "my_private_subnet" {
 
 #Internet Gateway
 
-resource "aws_internet_gateway" "my-igw" {
+resource "aws_internet_gateway" "my_igw" {
     vpc_id = aws_vpc.my_vpc.id
 
     tags = {
